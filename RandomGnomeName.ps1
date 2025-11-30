@@ -19,8 +19,8 @@ function Get-GnomeName {
 
     if($OneSyllableRoots -contains $Root){$Suffix = $true}
 
-    if(($Prefix -eq $true) -or ((Get-Random -Minimum 1 -Maximum 6) -eq 1)){$NamePrefix = $Prefixes[(Get-Random -Minimum 0 -Maximum ($Prefixes.Count))]}else{$NamePrefix=''}
-    if(($Suffix -eq $true) -or ((Get-Random -Minimum 1 -Maximum 6) -gt 1)){$NameSuffix = $Suffixes[(Get-Random -Minimum 0 -Maximum ($Suffixes.Count))]}else{$NameSuffix =''}
+    if(($Prefix -eq $true) -or ((Get-Random -Minimum 1 -Maximum 6) -eq 1)){$Prefix = $true;$NamePrefix = $Prefixes[(Get-Random -Minimum 0 -Maximum ($Prefixes.Count))]}else{$NamePrefix=''}
+    if(($Suffix -eq $true) -or ((Get-Random -Minimum 1 -Maximum 6) -gt 1)){$Suffix = $true;$NameSuffix = $Suffixes[(Get-Random -Minimum 0 -Maximum ($Suffixes.Count))]}else{$NameSuffix =''}
 
     if(($NameSuffix -like "ing") -and (($Root -notlike "*a") -or ($Root -notlike "*e") -or ($Root -notlike "*i") -or ($Root -notlike "*o") -or ($Root -notlike "*u") -or ($Root -notlike "*y"))){$Root = "$($Root)$($Root[-1])"}
     if((($NameSuffix -like "abble") -or ($NameSuffix -like "ibble")) -and (($Root -like "*a") -or ($Root -like "*e") -or ($Root -like "*i") -or ($Root -like "*o") -or ($Root -like "*u") -or ($Root -like "*y"))){$NameSuffix = "bble"}
@@ -62,5 +62,3 @@ function Get-GnomeName {
     $Name
 
 }
-
-#How am I getting "Tiing" and "Tiitchkers"?
