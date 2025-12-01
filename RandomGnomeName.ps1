@@ -1,11 +1,11 @@
-$Prefixes = @("Lill","Min","Sm")
-$OneSyllableRoots = ("bib","bin","blink","bob","did","dink","dun","fib","gig","glib","ingle","ink","ken","kin","kirk","link","nib","nip","nub","rap","riff","ren","sugar","ti","tink","tinkle","trib","tum","wig","wink")
+$Prefixes = @("L","M","Sm")
+$OneSyllableRoots = ("bib","bin","blink","bob","bumble","did","dink","dumble","dun","fib","gig","glib","ingle","ink","ken","kin","kirk","link","nib","nip","nub","rap","riff","ren","sugar","ti","tink","tinkle","trib","tum","wig","wink")
 $MultipleSyllableRoots = @("chibi","diddy","dunlop","giggle","itchker","tom","tummytum","wiggle")
 $Roots = @()
 $Roots += $OneSyllableRoots
 $Roots += $MultipleSyllableRoots
-$Suffixes = @("abble","bob","ibble","ing","inker","it","itcher","ken","kin","let","lin","ling","lingur","o","ocky","shick")
-$Vowels = @("a","e","i","o","u")
+$Suffixes = @("abble","bob","bin","ibble","ing","inker","it","itcher","ken","kin","let","lin","link","ling","lingur","o","ocky","shick")
+$Vowels = @("a","i")
 
 function Get-GnomeName {
     Param(
