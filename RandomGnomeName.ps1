@@ -1,10 +1,10 @@
-$Prefixes = @("d","did","silly")
+$Prefixes = @("did","silly")
 $OneSyllableRoots = ("bib","big","blink","bob","bumble","did","dink","dumble","fib","gig","glib","ingle","ink","ken","ker","kin","kirk","link","nab","nib","nip","nub","pib","rap","riff","tink","tinkle","tum","wig","wink")
-$MultipleSyllableRoots = @("bibble","chibi","diddy","giggle","itchker","nimble","riffle","sugar","tom","trib","tummytum","wiggle")
+$MultipleSyllableRoots = @("bibble","chibi","diddy","giggle","itchker","ninny","nimble","riffle","sugar","tom","trib","tummytum","wiggle")
 $Roots = @()
 $Roots += $OneSyllableRoots
 $Roots += $MultipleSyllableRoots
-$Suffixes = @("abble","bee","bob","bin","chub","ibble","iggle","in","ing","-inker","it","-itcher","ken","kin","let","lin","link","ling","lingur","ocky","nub","nubbin","shick","tom","wiggle")
+$Suffixes = @("abble","abbit","bee","bob","bin","chub","ibble","iggle","in","ing","-inker","it","-itcher","ken","kin","let","lin","link","ling","lingur","ocky","nub","nubbin","shick","tom","wiggle")
 $Vowels = @("a","i")
 
 function Get-GnomeName {
@@ -120,8 +120,10 @@ function Get-GnomeName {
     if($Name -like "*nubin*"){$Name = $Name.replace('nubin','nubbin')}
 
     if($Name -like "*bigit*"){$Name = $Name.replace('bigit','bibbit')}
+    if($Name -like "*niggle*"){$Name = $Name.replace('niggle','bibble')}
     if($Name -like "*bible*"){$Name = $Name.replace('bible','bibble')}
 
+    if($Name -like "*apin"){$Name = "$($Name.Substring(0,($Name.Length - 4)))appin"}
     if($Name -like "*umy"){$Name = "$($Name.Substring(0,($Name.Length - 3)))ummy"}
     if($Name -like "*uby"){$Name = "$($Name.Substring(0,($Name.Length - 3)))ubby"}
     if($Name -like "*iby"){$Name = "$($Name.Substring(0,($Name.Length - 3)))ibby"}
@@ -136,7 +138,18 @@ function Get-GnomeName {
     $Name = $Name.replace('uu','u')
     $Name = $Name.replace('kk','k')
     $Name = $Name.replace('--','-')
-    $Name = $Name.replace('nn','n-n')
+    
+    if($Name -like "*ninny*"){
+    
+        $Name = $Name.replace('ninny','xxx')
+        $Name = $Name.replace('nn','n-n')
+        $Name = $Name.replace('xxx','ninny')
+
+    }else{
+    
+        $Name = $Name.replace('nn','n-n')
+    
+    }
 
     $Name = "$($Name.Substring(0,1).ToUpper())"+"$($Name.Substring(1))"
 
