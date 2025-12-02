@@ -1,6 +1,6 @@
 $Prefixes = @("big","blink","rich","silly")
-$OneSyllableRoots = ("bib","bigs","bob","bum","chit","did","dink","fib","flub","gig","glib","hop","ingle","ink","ken","ker","kin","kirk","link","lump","nab","nib","nip","nub","peck","pib","riff","tink","tum","wig","wink")
-$MultipleSyllableRoots = @("bibble","bumble","chibi","chin","diddy","dingle","dumble","giggle","gummy","itchker","nipper","nibble","ninny","nimble","patter","pebble","piddle","pitter","riffle","scoot","skip","sniff","sugar","tickle","tingle","tinkle","toddle","tom","trib","tummytum","wiggle","winkle")
+$OneSyllableRoots = ("bib","bigs","bob","bum","chit","cub","cup","did","dink","fib","flub","gig","glib","gum","hop","ingle","ink","jig","ken","ker","kin","kirk","link","lump","nab","nib","nip","nub","peck","pib","plump","plunk","pop","riff","tink","tum","wig","wink")
+$MultipleSyllableRoots = @("bibble","bumble","chibi","chin","diddy","dimple","dingle","dumble","giggle","gummy","hiccup","itchker","nipper","nibble","ninny","nimble","patter","pebble","piddle","pitter","riffle","scoot","skip","sniff","sugar","thimble","tickle","tingle","tinkle","toddle","tom","trib","tummy","tummytum","wiggle","winkle")
 $Roots = @()
 $Roots += $OneSyllableRoots
 $Roots += $MultipleSyllableRoots
@@ -75,7 +75,7 @@ function Get-GnomeName {
     $Name = $Name.replace('ea','e-a')
     $Name = $Name.replace('ei','e-i')
     $Name = $Name.replace('ii','i')
-    $Name = $Name.replace('oo','o')
+    #$Name = $Name.replace('oo','o')
     $Name = $Name.replace('pb','p-b')
     $Name = $Name.replace('uu','u')
     $Name = $Name.replace('yy','y')
@@ -164,7 +164,7 @@ function Get-GnomeName {
 
     }else{
     
-        $Name = $Name.replace('nn','n-n')
+        #$Name = $Name.replace('nn','n-n')
     
     }
 
@@ -174,5 +174,19 @@ function Get-GnomeName {
     $Name = "$($Name.Substring(0,1).ToUpper())"+"$($Name.Substring(1))"
 
     $Name
+
+}
+
+#####
+
+$Nouns = @("finger","quill","stamp","toe","wit")
+$Agents = @("catcher","cooker","itcher","stamper","wrencher")
+$Adjectives = @("chilly","inky","itchy","quick","witty")
+
+function Get-GnomeSurname {
+
+#Verb + agent or agent + verb
+#Or
+#Adjective + noun
 
 }
