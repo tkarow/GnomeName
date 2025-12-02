@@ -1,10 +1,10 @@
-$Prefixes = @("big","did","rich","silly")
-$OneSyllableRoots = ("bib","bigs","blink","bob","chit","did","dink","fib","gig","glib","hop","ingle","ink","ken","ker","kin","kirk","link","nab","nib","nip","nub","peck","pib","riff","tink","tum","wig","wink")
-$MultipleSyllableRoots = @("bibble","bumble","chibi","diddy","dingle","dumble","giggle","gummy","itchker","nibble","ninny","nimble","pebble","piddle","riffle","sniff","sugar","tickle","tingle","tinkle","tom","trib","tummytum","wiggle","winkle")
+$Prefixes = @("big","blink","rich","silly")
+$OneSyllableRoots = ("bib","bigs","bob","chit","did","dink","fib","flub","gig","glib","hop","ingle","ink","ken","ker","kin","kirk","link","lump","nab","nib","nip","nub","peck","pib","riff","tink","tum","wig","wink")
+$MultipleSyllableRoots = @("bibble","bumble","chibi","chin","diddy","dingle","dumble","giggle","gummy","itchker","nipper","nibble","ninny","nimble","patter","pebble","piddle","pitter","riffle","scoot","skip","sniff","sugar","tickle","tingle","tinkle","toddle","tom","trib","tummytum","wiggle","winkle")
 $Roots = @()
 $Roots += $OneSyllableRoots
 $Roots += $MultipleSyllableRoots
-$Suffixes = @("abble","abbit","bee","bob","bin","chatter","chitter","chub","dumpling","ibble","iggle","in","ing","-inker","it","-itcher","ken","kin","let","lin","link","ling","lingur","ocky","piddle","pudding","nub","nubbin","rump","shick","sip","tom","wiff","wiggle")
+$Suffixes = @("abble","abbit","bee","bob","bin","chatter","chitter","chub","dumpling","ibble","iggle","in","ing","-inker","it","-itcher","ken","kin",,"knickers","let","lin","link","ling","lingur","nipper","ocky","piddle","pudding","nub","nubbin","rump","shick","sip","tom","wiff","wiggle")
 $Vowels = @("a","i")
 
 function Get-GnomeName {
@@ -78,7 +78,7 @@ function Get-GnomeName {
     $Name = $Name.replace('uu','u')
     $Name = $Name.replace('yy','y')
     $Name = $Name.replace('kk','k')
-    $Name = $Name.replace('kn','k-n')
+    $Name = $Name.replace('kn','kn')
     $Name = $Name.replace('kp','k-p')
     $Name = $Name.replace('kg','k-g')
     $Name = $Name.replace('gk','gg')
@@ -112,7 +112,7 @@ function Get-GnomeName {
 
     $Name = $Name.replace('fag','')
 
-    if(($Name -notlike "*a") -and ($Name -notlike "*e") -and ($Name -notlike "*i") -and ($Name -notlike "*o") -and ($Name -notlike "*u") -and ($Name -notlike "*y") -and ((Get-Random -Minimum 1 -Maximum 3) -eq 1)){$Name = "$($Name)s"}
+    if(($Name -notlike "*a") -and ($Name -notlike "*e") -and ($Name -notlike "*i") -and ($Name -notlike "*o") -and ($Name -notlike "*u") -and ($Name -notlike "*y") -and ($Name -notlike "*s") -and ((Get-Random -Minimum 1 -Maximum 3) -eq 1)){$Name = "$($Name)s"}
     if(($Name -notlike "*a") -and ($Name -notlike "*e") -and ($Name -notlike "*i") -and ($Name -notlike "*o") -and ($Name -notlike "*u") -and ($Name -notlike "*y") -and ($Name -notlike "*s") -and ($Suffix -eq $false) -and ((Get-Random -Minimum 1 -Maximum 4) -eq 1)){$Name = "$($Name)y"}
     if(($Name -like "*ny") -and ($Name -notlike "*nny")){$Name = "$($Name.Substring(0,($Name.Length - 2)))nny"}
 
