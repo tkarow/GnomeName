@@ -82,6 +82,7 @@ function Get-GnomeName {
     $Name = $Name.replace('ii','i')
     #$Name = $Name.replace('oo','o')
     $Name = $Name.replace('pb','p-b')
+    $Name = $Name.replace('ph','p-h')
     $Name = $Name.replace('uu','u')
     $Name = $Name.replace('yy','y')
     $Name = $Name.replace('kk','k')
