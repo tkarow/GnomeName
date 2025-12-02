@@ -1,10 +1,10 @@
-$Prefixes = @("B","K","L","P")
-$OneSyllableRoots = ("bib","bin","big","blink","bob","bumble","did","dink","dumble","dun","fib","gig","glib","ingle","ink","ken","ker","kin","kirk","link","nib","nip","nub","pib","rap","riff","ti","tink","tinkle","trib","tum","wig","wink")
-$MultipleSyllableRoots = @("bibble","chibi","diddy","giggle","itchker","sugar","tom","tummytum","wiggle")
+$Prefixes = @("b","d","f","k","l","t","wi")
+$OneSyllableRoots = ("bib","bin","big","blink","bob","bumble","did","dink","dumble","dun","fib","gig","glib","ingle","ink","ken","ker","kin","kirk","link","nib","nip","nub","pib","rap","riff","tink","tinkle","tum","wig","wink")
+$MultipleSyllableRoots = @("bibble","chibi","diddy","giggle","itchker","nimble","sugar","tom","trib","tummytum","wiggle")
 $Roots = @()
 $Roots += $OneSyllableRoots
 $Roots += $MultipleSyllableRoots
-$Suffixes = @("abble","bee","bob","bin","chub","ibble","iggle","in","ing","-inker","it","-itcher","ken","kin","let","lin","link","ling","lingur","ocky","shick","tom","wiggle")
+$Suffixes = @("abble","bee","bob","bin","chub","ibble","iggle","in","ing","-inker","it","-itcher","ken","kin","let","lin","link","ling","lingur","ocky","nub","nubbin","shick","tom","wiggle")
 $Vowels = @("a","i")
 
 function Get-GnomeName {
@@ -44,13 +44,24 @@ function Get-GnomeName {
     if(($Prefix -eq $true) -and (($Root -notlike "a*") -or ($Root -like "e*") -or ($Root -notlike "i*") -or ($Root -notlike "o*") -or ($Root -notlike "u*") -or ($Root -notlike "y*"))){$NamePrefix = "$($NamePrefix)$($Vowels[(Get-Random -Minimum 0 -Maximum ($Vowels.Count))])"}
 
     $Name = "$($NamePrefix)$($Root)$($NameSuffix)".ToLower()
-    $Name = "$($Name.Substring(0,1).ToUpper())"+"$($Name.Substring(1))"
 
     $Name = $Name.replace('aa','a')
     $Name = $Name.replace('ai','i')
     $Name = $Name.replace('ee','-e')
     if($NameSuffix -like "bee"){$Name = "$($Name.substring(0,($Name.Length -2)))bee"}
-    $Name = $Name.replace('bb','b')
+    
+    if($Name -like "*nubbins*"){
+    
+        $Name = $Name.replace('nubbin','xxx')
+        $Name = $Name.replace('bb','b')
+        $Name = $Name.replace('xxx','nubbin')
+
+    }else{
+    
+        $Name = $Name.replace('bb','b')
+    
+    }
+
     $Name = $Name.replace('bt','b-t')
     $Name = $Name.replace('bitch','b-itch')
     $Name = $Name.replace('ei','e-i')
@@ -65,12 +76,14 @@ function Get-GnomeName {
     $Name = $Name.replace('kg','k-g')
     $Name = $Name.replace('kw','k-w')
     $Name = $Name.replace('lll','-ll')
+    $Name = $Name.replace('mn','m-n')
     $Name = $Name.replace('fff','-ff')
     $Name = $Name.replace('rr','r')
     $Name = $Name.replace('ww','w')
     $Name = $Name.replace('yi','y-i')
-    if($Name -like "*bigit*"){$Name = $Name.replace('bigit','bibbit')}
-    if($Name -like "*bible*"){$Name = $Name.replace('bible','bibble')}
+
+    if($Name -like "*itchker*"){$Name = $Name.replace('itchker','itcher')}
+
     if($Name -like "*kock*"){
     
         $Roll = ''
@@ -97,12 +110,18 @@ function Get-GnomeName {
         $Roll = ''
         $Roll = Get-Random -Minimum 1 -Maximum 3
 
-        if($Roll -eq 1){$Name = "$($Name.Substring(0,($Name.Length - 4)))$($Name.Substring(($Name.Length - 5),1))able"}elseif($Roll -eq 2){$Name = "$($Name.Substring(0,($Name.Length - 4)))abble"}
+        if($Roll -eq 1){$Name = "$($Name.Substring(0,($Name.Length - 4)))$($Name.Substring(($Name.Length - 5),1))able"}else{$Name = "$($Name.Substring(0,($Name.Length - 4)))abble"}
         
     }
 
+    if($Name -like "*nubin*"){$Name = $Name.replace('nubin','nubbin')}
+
+    if($Name -like "*bigit*"){$Name = $Name.replace('bigit','bibbit')}
+    if($Name -like "*bible*"){$Name = $Name.replace('bible','bibble')}
+
     if($Name -like "*uby"){$Name = "$($Name.Substring(0,($Name.Length - 3)))ubby"}
     if($Name -like "*iby"){$Name = "$($Name.Substring(0,($Name.Length - 3)))ibby"}
+    if($Name -like "*ibin"){$Name = "$($Name.Substring(0,($Name.Length - 4)))ibbin"}
     if($Name -like "*umin"){$Name = "$($Name.Substring(0,($Name.Length - 4)))ummin"}
     if($Name -like "*ible"){$Name = "$($Name.Substring(0,($Name.Length - 4)))ibble"}
     if($Name -like "*eble"){$Name = "$($Name.Substring(0,($Name.Length - 4)))ebble"}
@@ -113,7 +132,9 @@ function Get-GnomeName {
     $Name = $Name.replace('uu','u')
     $Name = $Name.replace('kk','k')
     $Name = $Name.replace('--','-')
-    #$Name = $Name.replace('nn','n-n')
+    $Name = $Name.replace('nn','n-n')
+
+    $Name = "$($Name.Substring(0,1).ToUpper())"+"$($Name.Substring(1))"
 
     $Name
 
