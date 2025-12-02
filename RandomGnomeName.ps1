@@ -1,6 +1,6 @@
 $Prefixes = @("big","blink","rich","silly")
 $OneSyllableRoots = ("bib","bob","bum","chit","cub","cup","did","dink","fib","flub","gig","glib","gum","hop","ingle","ink","jig","ken","ker","kin","kirk","link","lump","nab","nib","nip","nub","peck","pib","plump","plunk","pop","riff","tink","tum","wig","wink")
-$MultipleSyllableRoots = @("bibble","bumble","chibi","chin","diddy","dimple","dingle","dumble","giggle","gummy","hiccup","itchker","nipper","nibble","ninny","nimble","patter","pebble","piddle","pitter","riffle","scoot","skip","sniff","sugar","thimble","tickle","tingle","tinkle","toddle","tom","trib","tummy","tummytum","wiggle","winkle")
+$MultipleSyllableRoots = @("bibble","bumble","chibi","chin","diddy","dimple","dingle","dumble","giggle","gummy","hiccup","itchker","nipper","nibble","ninny","nimble","patter","pebble","pepper","piddle","pitter","riffle","scoot","skip","sniff","sugar","thimble","tickle","tingle","tinkle","toddle","tom","trib","tummy","tummytum","wiggle","winkle")
 $Roots = @()
 $Roots += $OneSyllableRoots
 $Roots += $MultipleSyllableRoots
@@ -82,7 +82,7 @@ function Get-GnomeName {
     $Name = $Name.replace('uu','u')
     $Name = $Name.replace('yy','y')
     $Name = $Name.replace('kk','k')
-    $Name = $Name.replace('pp','p')
+    $Name = $Name.replace('ppp','pp')
     $Name = $Name.replace('kn','kn')
     $Name = $Name.replace('kp','k-p')
     $Name = $Name.replace('kg','k-g')
@@ -182,9 +182,9 @@ function Get-GnomeName {
 
 #####
 
-$Nouns = @("arrow","axe","cap","clog","drip","eye","finger","glimmer","glove","grub","hammer","ink","light","lore","needle","nubbin","pinky","quill","quiver","rock","rule","root","shoe","shovel","shroom","screw","soup","stamp","story","sugar","thread","thumb","toe","tongue","tooth","wit","well","wrench")
-$Agents = @("breaker","catcher","cooker","cutter","curler","inker","itcher","picker","puller","maker","mender","signer","snatcher","speaker","stamper","taster","teller","tinker","twitcher")
-$Adjectives = @("bright","broken","chilly","cold","dark","dim","fumble","gold","high","inky","itchy","low","pink","quick","silver","sweet","tiny","twitchy","twinkle","warm","witty")
+$Nouns = @("arrow","axe","beard","book","cap","clog","coal","drip","eye","finger","glimmer","glove","grub","hammer","ink","light","link","lore","needle","nubbin","pinky","quill","quiver","rock","rule","root","shoe","shovel","shroom","screw","soup","spell","stamp","story","sugar","thread","thumb","toe","tongue","tooth","wit","well","wrench")
+$Agents = @("breaker","caster","catcher","cooker","cutter","curler","finder","-inker","itcher","picker","puller","pusher","maker","mender","reader","signer","snatcher","speaker","stamper","taster","teller","tinker","twitcher","watcher","witcher","writer")
+$Adjectives = @("bright","broken","chilly","cold","dark","dim","dusty","fumble","gold","high","inky","itchy","lost","low","magic","pink","quick","silver","sweet","tiny","twitchy","twinkle","warm","wet","witty")
 
 function Get-GnomeSurname {
     
@@ -193,13 +193,25 @@ function Get-GnomeSurname {
     $Roll = ''
     $Roll = Get-Random -Minimum 1 -Maximum 3
 
-    if($Roll -eq 1){$Surname = "$($Adjectives[(Get-Random -Minimum 0 -Maximum ($Adjectives.Count))])$($Agents[(Get-Random -Minimum 0 -Maximum ($Agents.Count))])"}else{
+    if($Roll -eq 1){
     
-        
+        $1 =''
+        $1 = $Adjectives[(Get-Random -Minimum 0 -Maximum ($Adjectives.Count))]
 
-    }if($Roll -eq 2){
+        $2 = ''
+        $2 = $Agents[(Get-Random -Minimum 0 -Maximum ($Agents.Count))]
+
+        $Surname = "$($1)$(if($1[-1] -eq $2[0]){"-"})$($2)"
+        
+    }elseif($Roll -eq 2){
     
-        $Surname = "$($Nouns[(Get-Random -Minimum 0 -Maximum ($Nouns.Count))])$($Agents[(Get-Random -Minimum 0 -Maximum ($Agents.Count))])"
+        $1 =''
+        $1 = $Nouns[(Get-Random -Minimum 0 -Maximum ($Nouns.Count))]
+
+        $2 = ''
+        $2 = $Agents[(Get-Random -Minimum 0 -Maximum ($Agents.Count))]
+
+        $Surname = "$($1)$(if($1[-1] -eq $2[0]){"-"})$($2)"
 
     }
 
