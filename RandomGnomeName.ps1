@@ -1,10 +1,10 @@
-$Prefixes = @("did","rich","silly")
-$OneSyllableRoots = ("bib","big","blink","bob","chit","did","dink","fib","gig","glib","hop","ingle","ink","ken","ker","kin","kirk","link","nab","nib","nip","nub","pib","riff","tink","tum","wig","wink")
-$MultipleSyllableRoots = @("bibble","bumble","chibi","diddy","dingle","dumble","giggle","itchker","nibble","ninny","nimble","pebble","piddle","riffle","sniff","sugar","tickle","tingle","tinkle","tom","trib","tummytum","wiggle","winkle")
+$Prefixes = @("big","did","rich","silly")
+$OneSyllableRoots = ("bib","bigs","blink","bob","chit","did","dink","fib","gig","glib","hop","ingle","ink","ken","ker","kin","kirk","link","nab","nib","nip","nub","peck","pib","riff","tink","tum","wig","wink")
+$MultipleSyllableRoots = @("bibble","bumble","chibi","diddy","dingle","dumble","giggle","gummy","itchker","nibble","ninny","nimble","pebble","piddle","riffle","sniff","sugar","tickle","tingle","tinkle","tom","trib","tummytum","wiggle","winkle")
 $Roots = @()
 $Roots += $OneSyllableRoots
 $Roots += $MultipleSyllableRoots
-$Suffixes = @("abble","abbit","bee","bob","bin","chatter","chitter","chub","ibble","iggle","in","ing","-inker","it","-itcher","ken","kin","let","lin","link","ling","lingur","ocky","piddle","pudding","nub","nubbin","rump","shick","sip","tom","wiff","wiggle")
+$Suffixes = @("abble","abbit","bee","bob","bin","chatter","chitter","chub","dumpling","ibble","iggle","in","ing","-inker","it","-itcher","ken","kin","let","lin","link","ling","lingur","ocky","piddle","pudding","nub","nubbin","rump","shick","sip","tom","wiff","wiggle")
 $Vowels = @("a","i")
 
 function Get-GnomeName {
