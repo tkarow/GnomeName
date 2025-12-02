@@ -1,6 +1,6 @@
 $Prefixes = @("did","silly")
-$OneSyllableRoots = ("bib","big","blink","bob","bumble","did","dink","dumble","fib","gig","glib","ingle","ink","ken","ker","kin","kirk","link","nab","nib","nip","nub","pib","rap","riff","tink","tinkle","tum","wig","wink")
-$MultipleSyllableRoots = @("bibble","chibi","diddy","giggle","itchker","ninny","nimble","riffle","sugar","tom","trib","tummytum","wiggle")
+$OneSyllableRoots = ("bib","big","blink","bob","did","dink","fib","gig","glib","ingle","ink","ken","ker","kin","kirk","link","nab","nib","nip","nub","pib","rap","riff","tink","tum","wig","wink")
+$MultipleSyllableRoots = @("bibble","bumble","chibi","diddy","dingle","dumble","giggle","itchker","nibble","ninny","nimble","riffle","sugar","tingle","tinkle","tom","trib","tummytum","wiggle","winkle")
 $Roots = @()
 $Roots += $OneSyllableRoots
 $Roots += $MultipleSyllableRoots
@@ -41,7 +41,8 @@ function Get-GnomeName {
 
     }
 
-    if(($Prefix -eq $true) -and (($Root -notlike "a*") -or ($Root -like "e*") -or ($Root -notlike "i*") -or ($Root -notlike "o*") -or ($Root -notlike "u*") -or ($Root -notlike "y*"))){$NamePrefix = "$($NamePrefix)$($Vowels[(Get-Random -Minimum 0 -Maximum ($Vowels.Count))])-"}
+    #if(($Prefix -eq $true) -and (($Root -notlike "a*") -or ($Root -like "e*") -or ($Root -notlike "i*") -or ($Root -notlike "o*") -or ($Root -notlike "u*") -or ($Root -notlike "y*"))){$NamePrefix = "$($NamePrefix)$($Vowels[(Get-Random -Minimum 0 -Maximum ($Vowels.Count))])-"}
+    if(($Prefix -eq $true) -and (($Root -notlike "a*") -or ($Root -like "e*") -or ($Root -notlike "i*") -or ($Root -notlike "o*") -or ($Root -notlike "u*") -or ($Root -notlike "y*"))){$NamePrefix = "$($NamePrefix)-"}
 
     $Name = "$($NamePrefix)$($Root)$($NameSuffix)".ToLower()
 
