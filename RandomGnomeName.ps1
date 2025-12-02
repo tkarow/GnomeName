@@ -1,10 +1,10 @@
-$Prefixes = @("L","M","Sm")
-$OneSyllableRoots = ("bib","bin","blink","bob","bumble","did","dink","dumble","dun","fib","gig","glib","ingle","ink","ken","kin","kirk","link","nib","nip","nub","rap","riff","ren","sugar","ti","tink","tinkle","trib","tum","wig","wink")
-$MultipleSyllableRoots = @("chibi","diddy","dunlop","giggle","itchker","tom","tummytum","wiggle")
+$Prefixes = @("B","K","L","P")
+$OneSyllableRoots = ("bib","bin","big","blink","bob","bumble","did","dink","dumble","dun","fib","gig","glib","ingle","ink","ken","ker","kin","kirk","link","nib","nip","nub","pib","rap","riff","ti","tink","tinkle","trib","tum","wig","wink")
+$MultipleSyllableRoots = @("bibble","chibi","diddy","giggle","itchker","sugar","tom","tummytum","wiggle")
 $Roots = @()
 $Roots += $OneSyllableRoots
 $Roots += $MultipleSyllableRoots
-$Suffixes = @("abble","bob","bin","ibble","ing","inker","it","itcher","ken","kin","let","lin","link","ling","lingur","o","ocky","shick")
+$Suffixes = @("abble","bee","bob","bin","chub","ibble","iggle","in","ing","-inker","it","-itcher","ken","kin","let","lin","link","ling","lingur","ocky","shick","tom","wiggle")
 $Vowels = @("a","i")
 
 function Get-GnomeName {
@@ -49,18 +49,71 @@ function Get-GnomeName {
     $Name = $Name.replace('aa','a')
     $Name = $Name.replace('ai','i')
     $Name = $Name.replace('ee','-e')
+    if($NameSuffix -like "bee"){$Name = "$($Name.substring(0,($Name.Length -2)))bee"}
+    $Name = $Name.replace('bb','b')
+    $Name = $Name.replace('bt','b-t')
+    $Name = $Name.replace('bitch','b-itch')
     $Name = $Name.replace('ei','e-i')
     $Name = $Name.replace('ii','i')
     $Name = $Name.replace('oo','o')
+    $Name = $Name.replace('pb','p-b')
     $Name = $Name.replace('uu','u')
     $Name = $Name.replace('yy','y')
     $Name = $Name.replace('kk','k')
+    $Name = $Name.replace('kn','k-n')
+    $Name = $Name.replace('kp','k-p')
+    $Name = $Name.replace('kg','k-g')
+    $Name = $Name.replace('kw','k-w')
     $Name = $Name.replace('lll','-ll')
     $Name = $Name.replace('fff','-ff')
     $Name = $Name.replace('rr','r')
+    $Name = $Name.replace('ww','w')
+    $Name = $Name.replace('yi','y-i')
+    if($Name -like "*bigit*"){$Name = $Name.replace('bigit','bibbit')}
+    if($Name -like "*bible*"){$Name = $Name.replace('bible','bibble')}
+    if($Name -like "*kock*"){
+    
+        $Roll = ''
+        $Roll = Get-Random -Minimum 1 -Maximum 4
+
+        if($Roll -eq 1){$Name = $Name.replace('kock','kobb')}elseif($Roll -eq 2){$Name = $Name.replace('kock','kod')}else{$Name = $Name.replace('kock','kogg')}
+        
+    }
+
+    if($Name -like "*cock*"){
+    
+        $Roll = ''
+        $Roll = Get-Random -Minimum 1 -Maximum 4
+
+        if($Roll -eq 1){$Name = $Name.replace('cock','cobb')}elseif($Roll -eq 2){$Name = $Name.replace('cock','cod')}else{$Name = $Name.replace('cock','cogg')}
+        
+    }
 
     if(($Name -notlike "*a") -and ($Name -notlike "*e") -and ($Name -notlike "*i") -and ($Name -notlike "*o") -and ($Name -notlike "*u") -and ($Name -notlike "*y") -and ((Get-Random -Minimum 1 -Maximum 3) -eq 1)){$Name = "$($Name)s"}
     if(($Name -notlike "*a") -and ($Name -notlike "*e") -and ($Name -notlike "*i") -and ($Name -notlike "*o") -and ($Name -notlike "*u") -and ($Name -notlike "*y") -and ($Name -notlike "*s") -and ($Suffix -eq $false) -and ((Get-Random -Minimum 1 -Maximum 4) -eq 1)){$Name = "$($Name)y"}
+
+    if($Name -like "*able"){
+    
+        $Roll = ''
+        $Roll = Get-Random -Minimum 1 -Maximum 3
+
+        if($Roll -eq 1){$Name = "$($Name.Substring(0,($Name.Length - 4)))$($Name.Substring(($Name.Length - 5),1))able"}elseif($Roll -eq 2){$Name = "$($Name.Substring(0,($Name.Length - 4)))abble"}
+        
+    }
+
+    if($Name -like "*uby"){$Name = "$($Name.Substring(0,($Name.Length - 3)))ubby"}
+    if($Name -like "*iby"){$Name = "$($Name.Substring(0,($Name.Length - 3)))ibby"}
+    if($Name -like "*umin"){$Name = "$($Name.Substring(0,($Name.Length - 4)))ummin"}
+    if($Name -like "*ible"){$Name = "$($Name.Substring(0,($Name.Length - 4)))ibble"}
+    if($Name -like "*eble"){$Name = "$($Name.Substring(0,($Name.Length - 4)))ebble"}
+    if($Name -like "*ilet"){$Name = "$($Name.Substring(0,($Name.Length - 4)))illet"}
+    
+    $Name = $Name.replace('aa','a')
+    $Name = $Name.replace('fff','ff')
+    $Name = $Name.replace('uu','u')
+    $Name = $Name.replace('kk','k')
+    $Name = $Name.replace('--','-')
+    #$Name = $Name.replace('nn','n-n')
 
     $Name
 
