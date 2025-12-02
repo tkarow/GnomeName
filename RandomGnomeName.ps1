@@ -1,6 +1,6 @@
 $Prefixes = @("did","rich","silly")
 $OneSyllableRoots = ("bib","big","blink","bob","did","dink","fib","gig","glib","ingle","ink","ken","ker","kin","kirk","link","nab","nib","nip","nub","pib","riff","tink","tum","wig","wink")
-$MultipleSyllableRoots = @("bibble","bumble","chibi","diddy","dingle","dumble","giggle","itchker","nibble","ninny","nimble","riffle","sugar","tickle","tingle","tinkle","tom","trib","tummytum","wiggle","winkle")
+$MultipleSyllableRoots = @("bibble","bumble","chibi","diddy","dingle","dumble","giggle","itchker","nibble","ninny","nimble","pebble","riffle","sugar","tickle","tingle","tinkle","tom","trib","tummytum","wiggle","winkle")
 $Roots = @()
 $Roots += $OneSyllableRoots
 $Roots += $MultipleSyllableRoots
@@ -51,14 +51,16 @@ function Get-GnomeName {
     $Name = $Name.replace('ee','-e')
     if($NameSuffix -like "bee"){$Name = "$($Name.substring(0,($Name.Length -2)))bee"}
     
-    if(($Name -like "*nubbins*") -or ($Name -like "*nibble*")){
+    if(($Name -like "*nubbins*") -or ($Name -like "*nibble*") -or ($Name -like "*abbit")){
     
         $Name = $Name.replace('nubbin','xxx')
         $Name = $Name.replace('nibble','zzz')
-        #$Name = $Name.replace('bbb','b')
+        $Name = $Name.replace('abbit','qqq')
+        #$Name = $Name.replace('bb','b')
         $Name = $Name.replace('bbb','bb')
         $Name = $Name.replace('xxx','nubbin')
         $Name = $Name.replace('zzz','nibble')
+        $Name = $Name.replace('qqq','abbit')
 
     }else{
     
@@ -145,8 +147,14 @@ function Get-GnomeName {
     $Name = $Name.replace('kk','k')
     $Name = $Name.replace('--','-')
     
-    if($Name -like "*ninny*"){
+    if(($Name -like "*nny") -and ($Name -notlike "*nnny")){
     
+        $Name = "$($Name.Substring(0,($Name.Length - 3)).replace('nn','n-n'))nny"
+
+    }
+
+    if($Name -like "*ninny*"){
+
         $Name = $Name.replace('ninny','xxx')
         $Name = $Name.replace('nn','n-n')
         $Name = $Name.replace('xxx','ninny')
