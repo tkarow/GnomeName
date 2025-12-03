@@ -1,6 +1,6 @@
-$Prefixes = @("big","blink","rich","silly")
+$Prefixes = @("big","blink","rich")
 $OneSyllableRoots = ("bib","bob","bum","chit","cub","cup","did","dink","fib","flub","gig","glib","gum","hop","ingle","ink","jig","ken","ker","kin","kirk","link","lump","nab","nib","nip","nub","peck","pib","plump","plunk","pop","riff","tink","tum","wig","wink")
-$MultipleSyllableRoots = @("bibble","bumble","chibi","chin","diddy","dimple","dingle","dumble","giggle","gummy","hiccup","itchker","nipper","nibble","ninny","nimble","patter","pebble","pepper","piddle","pitter","riffle","scoot","skip","sniff","sugar","thimble","tickle","tingle","tinkle","toddle","tom","trib","tummy","tummytum","wiggle","winkle")
+$MultipleSyllableRoots = @("bibble","bumble","chibi","chin","diddy","dimple","dingle","dumble","giggle","gummy","hiccup","itchker","nipper","nibble","ninny","nimble","patter","pebble","pepper","piddle","pitter","riffle","scoot","silly","skip","sniff","sugar","thimble","tickle","tingle","tinkle","toddle","tom","trib","tummy","tummytum","wiggle","winkle")
 $Roots = @()
 $Roots += $OneSyllableRoots
 $Roots += $MultipleSyllableRoots
@@ -190,9 +190,9 @@ $RockNouns = @("arrow","axe","beard","book","bottle","button","cap","cavern","cl
 $RockAgents = @("bender","breaker","brow","caster","catcher","cooker","counter","crafter","cutter","digger","drinker","dripper","dropper","finder","fixer","grinder","hider","-inker","-itcher","judger","keeper","locker","picker","printer","puller","pusher","presser","maker","mender","quencher","reader","rooter","sealer","seeker","signer","sinker","snatcher","speaker","spinner","stamper","taster","teacher","teller","tender","thrower","tinker","tricker","twitcher","watcher","witcher","worker","writer")
 $RockAdjectives = @("bad","bright","broken","chilly","clean","cold","dark","deep","dim","dizzy","double","dusty","fumble","funny","gold","good","hard","high","inky","itchy","long","lost","loud","low","magic","noble","over","pink","quick","short","silver","soft","soot","steady","sweet","tender","tiny","twitchy","under","twinkle","warm","wet","witty")
 
-$ForestNouns = @("acorn","axe","autumn","bark","bean","beard","bed","bee","berry","bottle","bough","breeze","buckle","bud","bug","bulb","bush","butter","button","cap","circle","cloud","clover","color","craft","crystal","cup","dew","dream","drip","dusk","eye","flower","finger","fizzle","fungus","game","garden","garlic","germ","ginger","glade","glove","grass","grub","hearth","hive","home","honey","hunt","ivy","jam","leaf","light","lilly","lore","maple","moon","morning","moss","mud","mushroom","name","needle","nest","nubbin","nut","oak","patch","path","pepper","petal","pillow","pine","pinky","pipe","pond","prank","rain","root","sap","seed","shoe","shroom","shrub","sky","spice","song","soup","spell","splinter","song","sprig","spring","stem","stone","story","sugar","summer","sun","star","stick","stream","stump","syrup","thimble","thistle","thorn","thread","timber","trunk","thumb","toe","tongue","tooth","tree","twig","vision","water","wit","weed","well","whistle","willow","winter","wish","wisp","wode","wood")
-$ForestAgents = @("breaker","caster","catcher","cooker","crafter","cutter","dreamer","drinker","dropper","feather","finder","fixer","flitter","friend","grinder","grower","hider","hunter","-itcher","keeper","knot","picker","planter","player","plucker","puller","pusher","presser","maker","mender","patcher","quencher","ranger","rooter","seeker","seer","signer","smoker","snatcher","speaker","splitter","spinner","stamper","stinger","stitcher","taster","teacher","teller","tender","thrower","tinker","tracker","trapper","tricker","tumbler","twitcher","vine","watcher","weeder","wisher","witcher","worker")
-$ForestAdjectives = @("bad","bright","broken","chilly","clean","cold","cozy","dark","dizzy","double","fumble","funny","good","green","hard","high","itchy","long","lost","loud","low","magic","oak","over","pink","quick","shady","short","silver","soft","steady","sweet","tender","tiny","twitchy","twinkle","warm","wet","witty","wood")
+$ForestNouns = @("acorn","apple","axe","autumn","bark","bean","beard","bed","bee","beet","berry","birch","bottle","bough","breeze","buckle","bud","bug","bulb","bush","butter","button","cap","circle","cloud","clover","color","craft","crystal","cup","dew","dill","dream","drip","dusk","elder","elm","eye","flower","fig","finger","fizzle","fungus","game","garden","garlic","germ","ginger","glade","glove","grass","grub","hazel","hearth","herb","hive","home","honey","hunt","iris","ivy","jam","leaf","light","lilly","lore","magic","maple","melon","milk","mint","moon","morning","moss","mud","mushroom","name","needle","nest","nubbin","nut","oak","onion","pansy","parsnip","patch","path","peach","pepper","petal","pillow","pine","pinky","pipe","pond","pot","prank","pumpkin","rain","root","rose","sap","seed","shoe","shroom","shrub","sky","spice","song","soup","spell","splinter","song","sprig","spring","stem","stone","story","sugar","summer","sun","star","stick","stream","stump","syrup","thimble","thistle","thorn","thread","timber","trunk","thumb","toe","tongue","tooth","tree","turnip","twig","vision","water","wit","weed","well","whistle","willow","winter","wish","wisp","wode","wood")
+$ForestAgents = @("breaker","caster","catcher","cooker","crafter","cutter","dreamer","drinker","dropper","feather","finder","fixer","flitter","friend","grinder","grower","hider","hunter","-itcher","keeper","knot","picker","planter","player","plucker","puller","pusher","presser","maker","mender","patcher","quencher","ranger","rooter","sage","seeker","seer","signer","smoker","snatcher","speaker","splitter","spinner","stamper","stinger","stitcher","taster","teacher","teller","tender","thrower","tinker","tracker","trapper","tricker","tumbler","twitcher","vine","watcher","weeder","wisher","witcher","worker")
+$ForestAdjectives = @("bad","bright","broken","chilly","clean","cold","cozy","dark","dizzy","double","fumble","funny","good","green","hard","high","itchy","long","lost","loud","low","magic","oak","over","pink","quick","shady","short","silver","soft","steady","sweet","tender","tiny","twitchy","twinkle","warm","witty","wood")
 
 function Get-GnomeSurname {
     
@@ -248,8 +248,6 @@ function Get-GnomeSurname {
             $2 = ''
             $2 = $ForestAgents[(Get-Random -Minimum 0 -Maximum ($ForestAgents.Count))]
 
-            $Surname = "$($1)$(if($1[-1] -eq $2[0]){"-"})$($2)"
-        
         }elseif($Roll -eq 2){
     
             $1 =''
@@ -257,8 +255,6 @@ function Get-GnomeSurname {
 
             $2 = ''
             $2 = $ForestAgents[(Get-Random -Minimum 0 -Maximum ($ForestAgents.Count))]
-
-            $Surname = "$($1)$(if($1[-1] -eq $2[0]){"-"})$($2)"
 
         }elseif($Roll -eq 3){
     
@@ -268,11 +264,13 @@ function Get-GnomeSurname {
             $2 = ''
             $2 = $ForestNouns[(Get-Random -Minimum 0 -Maximum ($ForestNouns.Count))]
 
-            $Surname = "$($1)$(if($1[-1] -eq $2[0]){"-"})$($2)"
-
         }
 
     }
+
+    if($1[-1] -eq $2[0]){$Surname = "$($1)-$($2)"}else{$Surname = "$($1)$($2)"}
+
+    if(($1[-1] -eq "t") -and ($2[0] -eq "h")){$Surname = "$($1)-$($2)"}
 
     $Surname = "$($Surname.Substring(0,1).ToUpper())"+"$($Surname.Substring(1))"
 
