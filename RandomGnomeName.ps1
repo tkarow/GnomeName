@@ -6,7 +6,7 @@ $MultipleSyllableRoots = @("apple","bibble","bobbin","bumble","chibi","chin","di
 $Roots = @()
 $Roots += $OneSyllableRoots
 $Roots += $MultipleSyllableRoots
-$Suffixes = @("abble","abbit","bee"."bit","bob","bin","bun","by","chatter","chitter","chub","dumpling","ibble","iggle","in","ing","inker","it","itcher","ken","kin","knickers","let","lin","link","ling","lingur","nipper","ocky","piddle","pudding","nub","nubbin","rump","sby","shick","sip","tom","wiff","wiggle")
+$Suffixes = @("abble","abbit","bee"."bit","bob","bin","bun","by","chatter","chitter","chub","dumpling","ibble","iggle","in","ing","inker","it","itcher","jenkin","ken","kin","knickers","let","lin","link","ling","lingur","nipper","ocky","perkin","piddle","pudding","nub","nubbin","rump","sby","shick","sip","tom","wiff","wiggle")
 $Vowels = @("a","i")
 
 function Get-GnomeName {
@@ -141,6 +141,7 @@ function Get-GnomeName {
     if($Name -like "*nubin*"){$Name = $Name.replace('nible','nibble')}
 
     if($Name -like "*bigit*"){$Name = $Name.replace('bigit','bibbit')}
+    if($Name -like "*chink*"){$Name = $Name.replace('chink','chin-k')}
     if($Name -like "*niggle*"){$Name = $Name.replace('niggle','bibble')}
     if($Name -like "*bible*"){$Name = $Name.replace('bible','bibble')}
 
