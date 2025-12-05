@@ -345,3 +345,6 @@ function Get-GnomeSurname {
     $Surname
 
 }
+
+#Add -Aliteration
+#Add "cks" --> "x", "s" --> "z" switch?
