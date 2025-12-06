@@ -205,6 +205,7 @@ $RockAlliteritiveAdjectiveUniques = $RockAdjectives | sort | %{$_[0]} | Get-Uniq
 
 #region Expansion
 #Shoutout to tophonetics.com for the (American) IPA phonetic transcriptions
+
 $RockNounObjects = @(
     	[pscustomobject]@{
 			Word=“aim";
@@ -1738,6 +1739,10 @@ $RockAdjectiveObjects = @(
 		}
     )
 
+$RockNounPhoneticUniques = $RockNounObjects.IPA | %{"$(if($_[0] -eq "ˈ"){$_[1]}else{$_[0]})"} | Sort-Object | Get-Unique
+$RockAgentPhoneticUniques = $RockAgentObjects.IPA | %{"$(if($_[0] -eq "ˈ"){$_[1]}else{$_[0]})"} | Sort-Object | Get-Unique
+$RockAdjectivePhoneticUniques = $RockAdjectiveObjects.IPA | %{"$(if($_[0] -eq "ˈ"){$_[1]}else{$_[0]})"} | Sort-Object | Get-Unique
+
 #endregion
 
 #region The following arrays may be implemented in the future. Unsure.
@@ -1793,32 +1798,94 @@ function Get-GnomeSurname {
         
             if($Roll -eq 1){
             
-                $CommonCharacters = ''
+                $CommonSounds = ''
 
-                if($RockAlliteritiveAgentUniques.Count -gt $RockAlliteritiveAdjectiveUniques.Count){
+                if($RockAgentPhoneticUniques.Count -gt $RockAdjectivePhoneticUniques.Count){
                 
-                    $CommonCharacters = $RockAlliteritiveAdjectiveUniques | ?{$RockAlliteritiveAgentUniques -contains $_}
+                    $CommonSounds = $RockAdjectivePhoneticUniques | ?{$RockAgentPhoneticUniques -contains $_}
                     
                 }else{
                 
-                    $CommonCharacters = $RockAlliteritiveAgentUniques | ?{$RockAlliteritiveAdjectiveUniques -contains $_}
+                    $CommonSounds = $RockAgentPhoneticUniques | ?{$RockAdjectivePhoneticUniques -contains $_}
                     
                 }
 
-                $StartingLetter = ''
-                $StartingLetter = $CommonCharacters[(Get-Random -Minimum 0 -Maximum ($CommonCharacters.Count))]
+                $StartingSound = ''
+                $StartingSound = $CommonSounds[(Get-Random -Minimum 0 -Maximum ($CommonSounds.Count))]
 
-                $Options = ''
-                $Options = $RockAdjectives | ?{$_[0] -eq $StartingLetter}
+                $Options1 = ''
+                $Options1 = $RockAdjectiveObjects | ?{($_.IPA -like "$($StartingSound)*") -or($_.IPA -like "ˈ$($StartingSound)*")}
 
                 $1 =''
-                $1 = if($Options.Count -gt 1){$Options[(Get-Random -Minimum 0 -Maximum ($Options.Count))]}else{$Options}
+                $1 = if($Options1.Count -gt 1){($Options1[(Get-Random -Minimum 0 -Maximum ($Options1.Count))]).Word}else{$Options1.Word}
 
-                $Options = ''
-                $Options = $RockAgents | ?{$_[0] -eq $StartingLetter}
+                $Options2 = ''
+                $Options2 = $RockAgentObjects | ?{($_.IPA -like "$($StartingSound)*") -or ($_.IPA -like "ˈ$($StartingSound)*")}
 
                 $2 = ''
-                $2 = if($Options.Count -gt 1){$Options[(Get-Random -Minimum 0 -Maximum ($Options.Count))]}else{$Options}
+                $2 = if($Options2.Count -gt 1){($Options2[(Get-Random -Minimum 0 -Maximum ($Options2.Count))]).Word}else{$Options2.Word}
+
+            }
+
+            if($Roll -eq 2){
+            
+                $CommonSounds = ''
+
+                if($RockNounPhoneticUniques.Count -gt $RockAgentPhoneticUniques.Count){
+                
+                    $CommonSounds = $RockAgentPhoneticUniques | ?{$RockNounPhoneticUniques -contains $_}
+                    
+                }else{
+                
+                    $CommonSounds = $RockNounPhoneticUniques | ?{$RockAgentPhoneticUniques -contains $_}
+                    
+                }
+
+                $StartingSound = ''
+                $StartingSound = $CommonSounds[(Get-Random -Minimum 0 -Maximum ($CommonSounds.Count))]
+
+                $Options1 = ''
+                $Options1 = $RockNounObjects | ?{($_.IPA -like "$($StartingSound)*") -or($_.IPA -like "ˈ$($StartingSound)*")}
+
+                $1 =''
+                $1 = if($Options1.Count -gt 1){($Options1[(Get-Random -Minimum 0 -Maximum ($Options1.Count))]).Word}else{$Options1.Word}
+
+                $Options2 = ''
+                $Options2 = $RockAgentObjects | ?{($_.IPA -like "$($StartingSound)*") -or ($_.IPA -like "ˈ$($StartingSound)*")}
+
+                $2 = ''
+                $2 = if($Options2.Count -gt 1){($Options2[(Get-Random -Minimum 0 -Maximum ($Options2.Count))]).Word}else{$Options2.Word}
+
+            }
+
+            if($Roll -eq 3){
+            
+                $CommonSounds = ''
+
+                if($RockNounPhoneticUniques.Count -gt $RockAdjectivePhoneticUniques.Count){
+                
+                    $CommonSounds = $RockAdjectivePhoneticUniques | ?{$RockNounPhoneticUniques -contains $_}
+                    
+                }else{
+                
+                    $CommonSounds = $RockNounPhoneticUniques | ?{$RockAdjectivePhoneticUniques -contains $_}
+                    
+                }
+
+                $StartingSound = ''
+                $StartingSound = $CommonSounds[(Get-Random -Minimum 0 -Maximum ($CommonSounds.Count))]
+
+                $Options1 = ''
+                $Options1 = $RockAdjectiveObjects | ?{($_.IPA -like "$($StartingSound)*") -or($_.IPA -like "ˈ$($StartingSound)*")}
+
+                $1 =''
+                $1 = if($Options1.Count -gt 1){($Options1[(Get-Random -Minimum 0 -Maximum ($Options1.Count))]).Word}else{$Options1.Word}
+
+                $Options2 = ''
+                $Options2 = $RockNounObjects | ?{($_.IPA -like "$($StartingSound)*") -or ($_.IPA -like "ˈ$($StartingSound)*")}
+
+                $2 = ''
+                $2 = if($Options2.Count -gt 1){($Options2[(Get-Random -Minimum 0 -Maximum ($Options2.Count))]).Word}else{$Options2.Word}
 
             }
 
@@ -1875,49 +1942,148 @@ function Get-GnomeSurname {
         #Additional logic needed to make satisfying combinations of random nouns - increase Maximum to 5 once/if this is done
         $Roll = Get-Random -Minimum 1 -Maximum 4
 
-        if($Roll -eq 1){
+        if($Alliterative){
+        
+            if($Roll -eq 1){
+            
+                $CommonSounds = ''
+
+                if($ForestAgentPhoneticUniques.Count -gt $ForestAdjectivePhoneticUniques.Count){
+                
+                    $CommonSounds = $ForestAdjectivePhoneticUniques | ?{$ForestAgentPhoneticUniques -contains $_}
+                    
+                }else{
+                
+                    $CommonSounds = $ForestAgentPhoneticUniques | ?{$ForestAdjectivePhoneticUniques -contains $_}
+                    
+                }
+
+                $StartingSound = ''
+                $StartingSound = $CommonSounds[(Get-Random -Minimum 0 -Maximum ($CommonSounds.Count))]
+
+                $Options1 = ''
+                $Options1 = $ForestAdjectiveObjects | ?{($_.IPA -like "$($StartingSound)*") -or($_.IPA -like "ˈ$($StartingSound)*")}
+
+                $1 =''
+                $1 = if($Options1.Count -gt 1){($Options1[(Get-Random -Minimum 0 -Maximum ($Options1.Count))]).Word}else{$Options1.Word}
+
+                $Options2 = ''
+                $Options2 = $ForestAgentObjects | ?{($_.IPA -like "$($StartingSound)*") -or ($_.IPA -like "ˈ$($StartingSound)*")}
+
+                $2 = ''
+                $2 = if($Options2.Count -gt 1){($Options2[(Get-Random -Minimum 0 -Maximum ($Options2.Count))]).Word}else{$Options2.Word}
+
+            }
+
+            if($Roll -eq 2){
+            
+                $CommonSounds = ''
+
+                if($ForestNounPhoneticUniques.Count -gt $ForestAgentPhoneticUniques.Count){
+                
+                    $CommonSounds = $ForestAgentPhoneticUniques | ?{$ForestNounPhoneticUniques -contains $_}
+                    
+                }else{
+                
+                    $CommonSounds = $ForestNounPhoneticUniques | ?{$ForestAgentPhoneticUniques -contains $_}
+                    
+                }
+
+                $StartingSound = ''
+                $StartingSound = $CommonSounds[(Get-Random -Minimum 0 -Maximum ($CommonSounds.Count))]
+
+                $Options1 = ''
+                $Options1 = $ForestNounObjects | ?{($_.IPA -like "$($StartingSound)*") -or($_.IPA -like "ˈ$($StartingSound)*")}
+
+                $1 =''
+                $1 = if($Options1.Count -gt 1){($Options1[(Get-Random -Minimum 0 -Maximum ($Options1.Count))]).Word}else{$Options1.Word}
+
+                $Options2 = ''
+                $Options2 = $ForestAgentObjects | ?{($_.IPA -like "$($StartingSound)*") -or ($_.IPA -like "ˈ$($StartingSound)*")}
+
+                $2 = ''
+                $2 = if($Options2.Count -gt 1){($Options2[(Get-Random -Minimum 0 -Maximum ($Options2.Count))]).Word}else{$Options2.Word}
+
+            }
+
+            if($Roll -eq 3){
+            
+                $CommonSounds = ''
+
+                if($ForestNounPhoneticUniques.Count -gt $ForestAdjectivePhoneticUniques.Count){
+                
+                    $CommonSounds = $ForestAdjectivePhoneticUniques | ?{$ForestNounPhoneticUniques -contains $_}
+                    
+                }else{
+                
+                    $CommonSounds = $ForestNounPhoneticUniques | ?{$ForestAdjectivePhoneticUniques -contains $_}
+                    
+                }
+
+                $StartingSound = ''
+                $StartingSound = $CommonSounds[(Get-Random -Minimum 0 -Maximum ($CommonSounds.Count))]
+
+                $Options1 = ''
+                $Options1 = $ForestAdjectiveObjects | ?{($_.IPA -like "$($StartingSound)*") -or($_.IPA -like "ˈ$($StartingSound)*")}
+
+                $1 =''
+                $1 = if($Options1.Count -gt 1){($Options1[(Get-Random -Minimum 0 -Maximum ($Options1.Count))]).Word}else{$Options1.Word}
+
+                $Options2 = ''
+                $Options2 = $ForestNounObjects | ?{($_.IPA -like "$($StartingSound)*") -or ($_.IPA -like "ˈ$($StartingSound)*")}
+
+                $2 = ''
+                $2 = if($Options2.Count -gt 1){($Options2[(Get-Random -Minimum 0 -Maximum ($Options2.Count))]).Word}else{$Options2.Word}
+
+            }
+
+        }else{
+
+           if($Roll -eq 1){
     
-            $1 =''
-            $1 = $ForestAdjectives[(Get-Random -Minimum 0 -Maximum ($ForestAdjectives.Count))]
+                $1 =''
+                $1 = $ForestAdjectives[(Get-Random -Minimum 0 -Maximum ($ForestAdjectives.Count))]
 
-            $2 = ''
-            $2 = $ForestAgents[(Get-Random -Minimum 0 -Maximum ($ForestAgents.Count))]
+                $2 = ''
+                $2 = $ForestAgents[(Get-Random -Minimum 0 -Maximum ($ForestAgents.Count))]
 
-        }elseif($Roll -eq 2){
+            }elseif($Roll -eq 2){
     
-            $1 =''
-            $1 = $ForestNouns[(Get-Random -Minimum 0 -Maximum ($ForestNouns.Count))]
+                $1 =''
+                $1 = $ForestNouns[(Get-Random -Minimum 0 -Maximum ($ForestNouns.Count))]
 
-            $2 = ''
-            $2 = $ForestAgents[(Get-Random -Minimum 0 -Maximum ($ForestAgents.Count))]
+                $2 = ''
+                $2 = $ForestAgents[(Get-Random -Minimum 0 -Maximum ($ForestAgents.Count))]
 
-            if($1 -eq $2.Substring(0,$2.Length - 2)){$1 = $ForestAdjectives[(Get-Random -Minimum 0 -Maximum ($ForestAdjectives.Count))]}
+                if($1 -eq $2.Substring(0,$2.Length - 2)){$1 = $ForestAdjectives[(Get-Random -Minimum 0 -Maximum ($ForestAdjectives.Count))]}
 
-        #Additional logic needed to make satisfying combinations of random nouns
-        }elseif($Roll -eq 3){
+            #Additional logic needed to make satisfying combinations of random nouns
+            }elseif($Roll -eq 3){
     
-            $1 =''
-            $1 = $ForestAdjectives[(Get-Random -Minimum 0 -Maximum ($ForestAdjectives.Count))]
+                $1 =''
+                $1 = $ForestAdjectives[(Get-Random -Minimum 0 -Maximum ($ForestAdjectives.Count))]
 
-            $2 = ''
-            $2 = $ForestNouns[(Get-Random -Minimum 0 -Maximum ($ForestNouns.Count))]
+                $2 = ''
+                $2 = $ForestNouns[(Get-Random -Minimum 0 -Maximum ($ForestNouns.Count))]
 
-            if($1 -eq $2){$2 = $ForestAgents[(Get-Random -Minimum 0 -Maximum ($ForestAgents.Count))]}
+                if($1 -eq $2){$2 = $ForestAgents[(Get-Random -Minimum 0 -Maximum ($ForestAgents.Count))]}
 
-        #Additional logic needed to make satisfying combinations of random nouns
-        }elseif($Roll -eq 4){
+            #Additional logic needed to make satisfying combinations of random nouns
+            }elseif($Roll -eq 4){
     
-            $1 =''
-            $1 = $ForestNouns[(Get-Random -Minimum 0 -Maximum ($ForestNouns.Count))]
+                $1 =''
+                $1 = $ForestNouns[(Get-Random -Minimum 0 -Maximum ($ForestNouns.Count))]
 
-            $2 = ''
-            $2 = $ForestNouns[(Get-Random -Minimum 0 -Maximum ($ForestNouns.Count))]
+                $2 = ''
+                $2 = $ForestNouns[(Get-Random -Minimum 0 -Maximum ($ForestNouns.Count))]
 
-            if($1 -eq $2){$2 = $ForestAgents[(Get-Random -Minimum 0 -Maximum ($ForestAgents.Count))]}
+                if($1 -eq $2){$2 = $ForestAgents[(Get-Random -Minimum 0 -Maximum ($ForestAgents.Count))]}
+
+            }
+
+            if($2 -like "friend"){$1 = $ForestFriends[(Get-Random -Minimum 0 -Maximum ($ForestFriends.Count))]}
 
         }
-
-        if($2 -like "friend"){$1 = $ForestFriends[(Get-Random -Minimum 0 -Maximum ($ForestFriends.Count))]}
 
     }
 
@@ -1935,5 +2101,6 @@ function Get-GnomeSurname {
 
 }
 
-#Add -Aliteration
+#Need to complete forest surname object arrays
+#Need a way of removing duplicate words before choosing options for surnames
 #Add "cks" --> "x", "s" --> "z" switch?
