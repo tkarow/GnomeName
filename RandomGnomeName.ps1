@@ -3648,8 +3648,11 @@ function Get-GnomeSurname {
         [ValidateSet("Rock","Forest")]
         [string]$Type,
         [parameter(Mandatory=$False)]
-        [bool]$Alliterative
+        [ValidateSet("Random","Alliterative","Rhyming")]
+        [string]$Mode
     )
+
+    if($Mode -eq ''){$Mode = "Random"}
 
     if(!$Type){if((Get-Random -Minimum 1 -Maximum 3) -eq 1){$Type = "Rock"}else{$Type = "Forest"}}
 
@@ -3661,7 +3664,7 @@ function Get-GnomeSurname {
         #Additional logic needed to make satisfying combinations of random nouns - increase Maximum to 5 once/if this is done
         $Roll = Get-Random -Minimum 1 -Maximum 4
 
-        if($Alliterative){
+        if($Mode -eq $Alliterative){
         
             if($Roll -eq 1){
 
@@ -3773,7 +3776,7 @@ function Get-GnomeSurname {
         #Additional logic needed to make satisfying combinations of random nouns - increase Maximum to 5 once/if this is done
         $Roll = Get-Random -Minimum 1 -Maximum 4
 
-        if($Alliterative){
+        if($Mode -eq $Alliterative){
         
             if($Roll -eq 1){
             
@@ -3896,6 +3899,7 @@ function Get-GnomeSurname {
 
 }
 
-#Remove duplicate IPA pronunciations and populate values for those that have 0
-#Need a way of removing duplicate words before choosing options for surnames
+#Add rhyming mode
+#Rewrite original code to reflect new object arrays
+#Incorporate sub-arrays as tags on new arrays
 #Add "cks" --> "x", "s" --> "z" switch?
