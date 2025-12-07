@@ -224,13 +224,13 @@ $RockFluids = @("oil","water")
 
 #region Expansion
 
-##############
-##############
-##          ##
-## Surnames ##
-##          ##
-##############
-##############
+##########################
+##########################
+##                      ##
+## Surname Constructors ##
+##                      ##
+##########################
+##########################
 
 ######
 #Rock#
@@ -372,7 +372,7 @@ $RockNounObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“cubby";
-			IPA=""
+			IPA="kʌbi"
 		},
 		[pscustomobject]@{
 			Word=“crystal";
@@ -388,7 +388,7 @@ $RockNounObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“dial";
-			IPA="ˈdaɪəl","daɪl"
+			IPA="ˈdaɪəl"
 		},
 		[pscustomobject]@{
 			Word=“dingle";
@@ -408,7 +408,7 @@ $RockNounObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“engine";
-			IPA="ˈɛnʤən","ˈɪnʤən"
+			IPA="ˈɛnʤən"
 		},
 		[pscustomobject]@{
 			Word=“fault";
@@ -424,7 +424,7 @@ $RockNounObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“fire";
-			IPA="ˈfaɪər","faɪr"
+			IPA="faɪr"
 		},
 		[pscustomobject]@{
 			Word=“fizzle";
@@ -508,7 +508,7 @@ $RockNounObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“hour";
-			IPA="ˈaʊər","aʊr"
+			IPA="ˈaʊər"
 		},
 		[pscustomobject]@{
 			Word=“ink";
@@ -520,7 +520,7 @@ $RockNounObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“jewel";
-			IPA="ˈʤuəl","ʤul"
+			IPA="ˈʤuəl"
 		},
 		[pscustomobject]@{
 			Word=“key";
@@ -536,7 +536,7 @@ $RockNounObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“law";
-			IPA="lɔ","lɑ"
+			IPA="lɔ"
 		},
 		[pscustomobject]@{
 			Word=“ledger";
@@ -608,7 +608,7 @@ $RockNounObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“nubbin";
-			IPA=""
+			IPA="ˈnʌbɪn"
 		},
 		[pscustomobject]@{
 			Word=“number";
@@ -652,7 +652,7 @@ $RockNounObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“project";
-			IPA="ˈprɑʤɛkt","prəˈʤɛkt"
+			IPA="ˈprɑʤɛkt"
 		},
 		[pscustomobject]@{
 			Word=“pulley";
@@ -680,7 +680,7 @@ $RockNounObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“ratchet";
-			IPA="ˈræʧət","rætʧət"
+			IPA="ˈræʧət"
 		},
 		[pscustomobject]@{
 			Word=“rock";
@@ -692,7 +692,7 @@ $RockNounObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“ruin";
-			IPA="ˈruən","ˈruɪn"
+			IPA="ˈruɪn"
 		},
 		[pscustomobject]@{
 			Word=“rule";
@@ -756,7 +756,7 @@ $RockNounObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“shroom";
-			IPA=""
+			IPA="ʃɹuːm"
 		},
 		[pscustomobject]@{
 			Word=“slot";
@@ -788,7 +788,7 @@ $RockNounObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“spring";
-			IPA="sprɪŋ","spəˈrɪŋ"
+			IPA="sprɪŋ"
 		},
 		[pscustomobject]@{
 			Word=“spunk";
@@ -912,7 +912,7 @@ $RockNounObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“whatsit";
-			IPA=""
+			IPA="wʌtˈsɪt"
 		},
 		[pscustomobject]@{
 			Word=“widget";
@@ -1135,12 +1135,12 @@ $RockAgentObjects = @(
 			IPA="ˈhɑpər"
 		},
 		[pscustomobject]@{
-			Word=“-inker";
-			IPA="-ˈɪŋkər"
+			Word=“inker";
+			IPA="ˈɪŋkər"
 		},
 		[pscustomobject]@{
-			Word=“-itcher";
-			IPA="-ˈɪʧər"
+			Word=“itcher";
+			IPA="ˈɪʧər"
 		},
 		[pscustomobject]@{
 			Word=“jigger";
@@ -1204,7 +1204,7 @@ $RockAgentObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“monch";
-			IPA=""
+			IPA="mœnç"
 		},
 		[pscustomobject]@{
 			Word=“more";
@@ -1244,7 +1244,7 @@ $RockAgentObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“polish";
-			IPA="ˈpɑlɪʃ","ˈpoʊlɪʃ"
+			IPA="ˈpɑlɪʃ"
 		},
 		[pscustomobject]@{
 			Word=“prank";
@@ -1252,7 +1252,7 @@ $RockAgentObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“printer";
-			IPA="ˈprɪntər","ˈprɪnər"
+			IPA="ˈprɪntər"
 		},
 		[pscustomobject]@{
 			Word=“puller";
@@ -1296,11 +1296,11 @@ $RockAgentObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“noggin";
-			IPA=""
+			IPA="ˈnɑɡɪn"
 		},
 		[pscustomobject]@{
 			Word=“officer";
-			IPA="ˈɔfəsər","ˈɔfɪsər"
+			IPA="ˈɔfəsər"
 		},
 		[pscustomobject]@{
 			Word=“planner";
@@ -1328,7 +1328,7 @@ $RockAgentObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“scamp";
-			IPA=""
+			IPA="skæmp"
 		},
 		[pscustomobject]@{
 			Word=“scooper";
@@ -1448,7 +1448,7 @@ $RockAgentObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“winder";
-			IPA="ˈwɪndər","ˈwaɪndər"
+			IPA="ˈwaɪndər"
 		},
 		[pscustomobject]@{
 			Word=“witcher";
@@ -1551,7 +1551,7 @@ $RockAdjectiveObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“fraggle";
-			IPA=""
+			IPA="fɹæɡɫ̩"
 		},
 		[pscustomobject]@{
 			Word=“frolic";
@@ -1571,7 +1571,7 @@ $RockAdjectiveObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“good";
-			IPA="ɡʊd","ɡɪd"
+			IPA="ɡʊd"
 		},
 		[pscustomobject]@{
 			Word=“grumble";
@@ -1691,7 +1691,7 @@ $RockAdjectiveObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“soft";
-			IPA="sɑft","sɔft"
+			IPA="sɔft"
 		},
 		[pscustomobject]@{
 			Word=“soot";
@@ -1727,7 +1727,7 @@ $RockAdjectiveObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“top";
-			IPA="tɑp","tɔp"
+			IPA="tɑp"
 		},
 		[pscustomobject]@{
 			Word=“trick";
@@ -1735,11 +1735,11 @@ $RockAdjectiveObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“tricksy";
-			IPA=""
+			IPA="tɹɪksi"
 		},
 		[pscustomobject]@{
 			Word=“twitchy";
-			IPA=""
+			IPA="ˈtwɪt͡ʃi"
 		},
 		[pscustomobject]@{
 			Word=“under";
@@ -1851,7 +1851,7 @@ $ForestNounObjects =  @(
 		},
 		[pscustomobject]@{
 			Word=“blanket";
-			IPA="ˈblæŋkət","ˈblæŋkɪt"
+			IPA="ˈblæŋkɪt"
 		},
 		[pscustomobject]@{
 			Word=“bloom";
@@ -1943,7 +1943,7 @@ $ForestNounObjects =  @(
 		},
         [pscustomobject]@{
 			Word=“chive";
-			IPA=""
+			IPA="t͡ʃaɪv"
 		},
 		[pscustomobject]@{
 			Word=“cider";
@@ -2031,7 +2031,7 @@ $ForestNounObjects =  @(
 		},
 		[pscustomobject]@{
 			Word=“dwale";
-			IPA=""
+			IPA="dweɪl"
 		},
 		[pscustomobject]@{
 			Word=“earth";
@@ -2083,7 +2083,7 @@ $ForestNounObjects =  @(
 		},
 		[pscustomobject]@{
 			Word=“forest";
-			IPA="ˈfɔrəst","ˈfɔrɪst"
+			IPA="ˈfɔrəst"
 		},
 		[pscustomobject]@{
 			Word=“fork";
@@ -2191,7 +2191,7 @@ $ForestNounObjects =  @(
 		},
 		[pscustomobject]@{
 			Word=“iris";
-			IPA="ˈaɪrəs","ˈaɪrɪs"
+			IPA="ˈaɪrɪs"
 		},
 		[pscustomobject]@{
 			Word=“ivy";
@@ -2311,7 +2311,7 @@ $ForestNounObjects =  @(
 		},
 		[pscustomobject]@{
 			Word=“nubbin";
-			IPA=""
+			IPA="ˈnʌbɪn"
 		},
 		[pscustomobject]@{
 			Word=“nut";
@@ -2347,7 +2347,7 @@ $ForestNounObjects =  @(
 		},
 		[pscustomobject]@{
 			Word=“parsnip";
-			IPA=""
+			IPA="ˈpɑɹ.snɪp"
 		},
 		[pscustomobject]@{
 			Word=“patch";
@@ -2431,7 +2431,7 @@ $ForestNounObjects =  @(
 		},
 		[pscustomobject]@{
 			Word=“pumpkin";
-			IPA="ˈpʌmpkɪn","ˈpʌmkɪn"
+			IPA="ˈpʌmpkɪn"
 		},
 		[pscustomobject]@{
 			Word=“rain";
@@ -2475,7 +2475,7 @@ $ForestNounObjects =  @(
 		},
 		[pscustomobject]@{
 			Word=“shroom";
-			IPA=""
+			IPA="ʃɹuːm"
 		},
 		[pscustomobject]@{
 			Word=“shrub";
@@ -2531,11 +2531,11 @@ $ForestNounObjects =  @(
 		},
 		[pscustomobject]@{
 			Word=“sprig";
-			IPA=""
+			IPA="spɹɪɡ"
 		},
 		[pscustomobject]@{
 			Word=“spring";
-			IPA="sprɪŋ","spəˈrɪŋ"
+			IPA="sprɪŋ"
 		},
 		[pscustomobject]@{
 			Word=“spud";
@@ -2595,7 +2595,7 @@ $ForestNounObjects =  @(
 		},
 		[pscustomobject]@{
 			Word=“syrup";
-			IPA="ˈsɪrəp","ˈsɜrəp"
+			IPA="ˈsɪrəp"
 		},
 		[pscustomobject]@{
 			Word=“tater";
@@ -2695,7 +2695,7 @@ $ForestNounObjects =  @(
 		},
 		[pscustomobject]@{
 			Word=“wind";
-			IPA="wɪnd","waɪnd"
+			IPA="wɪnd"
 		},
 		[pscustomobject]@{
 			Word=“wit";
@@ -2731,7 +2731,7 @@ $ForestNounObjects =  @(
 		},
 		[pscustomobject]@{
 			Word=“wode";
-			IPA=""
+			IPA="ˈwoːd"
 		},
 		[pscustomobject]@{
 			Word=“wood";
@@ -2739,7 +2739,7 @@ $ForestNounObjects =  @(
 		},
 		[pscustomobject]@{
 			Word=“wort";
-			IPA=""
+			IPA="wɝt"
 		},
 		[pscustomobject]@{
 			Word=“yew";
@@ -2931,8 +2931,8 @@ $ForestAgentObjects = @(
 			IPA="ˈhʌntər"
 		},
 		[pscustomobject]@{
-			Word=“-itcher";
-			IPA="-ˈɪʧər"
+			Word=“itcher";
+			IPA="ˈɪʧər"
 		},
 		[pscustomobject]@{
 			Word=“jelly";
@@ -2976,7 +2976,7 @@ $ForestAgentObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“mannin";
-			IPA=""
+			IPA="ˈmanːɪn"
 		},
 		[pscustomobject]@{
 			Word=“mate";
@@ -2996,7 +2996,7 @@ $ForestAgentObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“monch";
-			IPA=""
+			IPA="ˈmonʧ"
 		},
 		[pscustomobject]@{
 			Word=“more";
@@ -3016,7 +3016,7 @@ $ForestAgentObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“noggin";
-			IPA=""
+			IPA="ˈnɑɡɪn"
 		},
 		[pscustomobject]@{
 			Word=“pants";
@@ -3088,7 +3088,7 @@ $ForestAgentObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“scamp";
-			IPA=""
+			IPA="skæmp"
 		},
 		[pscustomobject]@{
 			Word=“scratcher";
@@ -3192,7 +3192,7 @@ $ForestAgentObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“toker";
-			IPA=""
+			IPA="təʊkɚ"
 		},
 		[pscustomobject]@{
 			Word=“tracker";
@@ -3273,7 +3273,7 @@ $ForestAdjectiveObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“calm";
-			IPA="kɑm","kɑlm"
+			IPA="kɑm"
 		},
 		[pscustomobject]@{
 			Word=“candy";
@@ -3349,7 +3349,7 @@ $ForestAdjectiveObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“good";
-			IPA="ɡʊd","ɡɪd"
+			IPA="ɡʊd"
 		},
 		[pscustomobject]@{
 			Word=“green";
@@ -3477,7 +3477,7 @@ $ForestAdjectiveObjects = @(
 		},
 		[pscustomobject]@{
 			Word=“soft";
-			IPA="sɑft","sɔft"
+			IPA="sɔft"
 		},
 		[pscustomobject]@{
 			Word=“spore";
@@ -3561,7 +3561,7 @@ $ForestAdjectivePhoneticUniques = $ForestAdjectiveObjects.IPA | %{"$(if($_[0] -e
 #endregion
 
 $ForestNouns = @("aloe","acorn","alder","apple","autumn","barb","bark","basket","bean","beard","bed","bee","beet","bell","belly","berry","birch","biscuit","blanket","bloom","bobbin","bottle","bough","breeze","bubble","buckle","bud","buddy","bug","bulb","bur","bush","butter","button","candle","candy","cane","cap","cedar","cherry","cider","chive","circle","cloud","clover","comb","conker","craft","cream","critter","crumb","crystal","cup","day","daze","dingle","dew","dill","dream","drip","dumpling","dusk","dwale","earth","egg","elder","elm","fern","flip","flower","field","fig","finger","fir","fizzle","forest","fork","fruit","fumble","fungus","game","garden","garland","garlic","germ","ginger","glade","glove","grass","grub","harvest","hazel","hearth","hedge","hemlock","hive","hollow","holly","home","honey","horn","hunt","iris","ivy","jam","land","leaf","leek","light","lilly","litter","lore","magic","maple","marsh","meadow","melon","milk","mint","moon","morning","moss","mud","muffin","mushroom","nap","nature","nectar","needle","nest","nettle","night","nubbin","nut","oak","oath","onion","orchid","paddy","pansy","parsley","parsnip","patch","path","pea","peach","pepper","petal","pillow","pine","pinky","pipe","plum","pocket","pond","poppy","pot","prank","promise","prune","puddle","puff","pumpkin","rain","rascal","root","rose","sap","scuttle","seed","shade","shoe","shoot","shroom","shrub","sky","slug","snail","spice","spoon","snack","song","soup","spell","splinter","spore","song","sprig","spring","spud","spruce","spunk","stem","stone","stew","story","sugar","summer","sun","star","stick","stream","stump","syrup","tater","tea","thimble","thistle","thorn","thread","timber","tonic","truffle","trunk","thumb","toe","tongue","tooth","tree","tuft","tulip","turnip","twig","vision","waffle","wall","water","wax","wind","wit","weed","well","whistle","willow","winter","wish","wisp","wode","wood","wort","yew")
-$ForestAgents = @("belly","berry","biter","bits","bobber","brush","buddy","bun","buzzer","cake","caller","caster","catcher","chiller","chum","climber","cooker","crafter","critter","dancer","dinger","dreamer","dropper","fellow","field","finder","fixer","flicker","flitter","flower","friend","friend","friend","gnome","giver","grower","gum","heimer","helmer","hider","holder","home","hopper","hummer","hunter","-itcher","jelly","joker","juicer","keeper","knickers","knocker","knot","lover","maker","mallow","mannin","mate","meister","mender","meyer","monch","more","munch","muncher","namer","noggin","pants","picker","pocket","planter","player","plucker","prank","puffer","puller","pusher","putter","patcher","pocket","ranger","rooter","rump","sage","scamp","scratcher","seeker","seer","shaper","sharer","sipper","smoker","snacker","snatcher","speaker","splitter","spinner","stamper","stinger","stitcher","stopper","straw","supper","taster","teacher","teller","tender","thrower","thumper","tinker","toker","tracker","trapper","tricker","tucker","tumbler","tummy","twitcher","vine","wander","watcher","weaver","weeder","wicker","wisher","witcher","worker")
+$ForestAgents = @("belly","berry","biter","bits","bobber","brush","buddy","bun","buzzer","cake","caller","caster","catcher","chiller","chum","climber","cooker","crafter","critter","dancer","dinger","dreamer","dropper","fellow","field","finder","fixer","flicker","flitter","flower","friend","friend","friend","gnome","giver","grower","gum","heimer","helmer","hider","holder","home","hopper","hummer","hunter","itcher","jelly","joker","juicer","keeper","knickers","knocker","knot","lover","maker","mallow","mannin","mate","meister","mender","meyer","monch","more","munch","muncher","namer","noggin","pants","picker","pocket","planter","player","plucker","prank","puffer","puller","pusher","putter","patcher","pocket","ranger","rooter","rump","sage","scamp","scratcher","seeker","seer","shaper","sharer","sipper","smoker","snacker","snatcher","speaker","splitter","spinner","stamper","stinger","stitcher","stopper","straw","supper","taster","teacher","teller","tender","thrower","thumper","tinker","toker","tracker","trapper","tricker","tucker","tumbler","tummy","twitcher","vine","wander","watcher","weaver","weeder","wicker","wisher","witcher","worker")
 $ForestAdjectives = @("bright","butter","calm","candy","cheery","chortle","clean","clever","cold","cozy","crafty","crumb","dizzy","double","early","easy","fair","fey","frolic","funny","glad","good","green","grumble","half","happy","hard","high","humming","itchy","jelly","lax","long","lost","loud","low","magic","mellow","muddy","munch","naughty","nutty","oak","odd","over","pocket","puff","quick","ripe","shady","short","silver","sly","soft","spore","steady","stink","sugar","sunny","sweet","tender","thunder","tiny","tricksy","twitchy","twinkle","warm","wee","wild","witty","wonder","wood")
 $ForestFriends = @()
 $AllForestPlants = @("aloe","apple","bean","beet","berry","birch","bloom","bush","cedar","cherry","chive","clover","dill","dwale","elm","fern","flower","fig","fir","fruit","fungus","garlic","ginger","grass","hazel","hemlock","holly","iris","ivy","leek","lilly","maple","melon","mint","moss","mushroom","nettle","oak","onion","orchid","paddy","pansy","parsley","parsnip","pea","peach","pepper","pine","plum","pumpkin","poppy","rose","shroom","shrub","spud","tater","truffle","tree","tulip","turnip","weed","willow","wort","yew")
@@ -3587,24 +3587,57 @@ function Get-Alliterative {
         [string]$Set1,
         [parameter(Mandatory=$True)]
         [ValidateSet("Noun","Agent","Adjective")]
-        [string]$Set2
+        [string]$Set2,
+        [parameter(Mandatory=$False)]
+        [bool]$ReturnSet
     )
 
     $CommonSounds = ''
+    $Try = $true
 
-    if((Get-Variable "$($GnomeType)$($Set1)PhoneticUniques").Value.Count -gt (Get-Variable "$($GnomeType)$($Set2)PhoneticUniques").Value.Count){
+    while($Try -eq $true){
+
+        if((Get-Variable "$($GnomeType)$($Set1)PhoneticUniques").Value.Count -gt (Get-Variable "$($GnomeType)$($Set2)PhoneticUniques").Value.Count){
                 
-        $CommonSounds = (Get-Variable "$($GnomeType)$($Set2)PhoneticUniques").Value | ?{(Get-Variable "$($GnomeType)$($Set1)PhoneticUniques").Value -contains $_}
+            $CommonSounds = (Get-Variable "$($GnomeType)$($Set2)PhoneticUniques").Value.trim() | ?{(Get-Variable "$($GnomeType)$($Set1)PhoneticUniques").Value -contains $_}
                     
-    }else{
+        }else{
                 
-        $CommonSounds = (Get-Variable "$($GnomeType)$($Set1)PhoneticUniques").Value | ?{(Get-Variable "$($GnomeType)$($Set2)PhoneticUniques").Value -contains $_}
+            $CommonSounds = (Get-Variable "$($GnomeType)$($Set1)PhoneticUniques").Value.trim() | ?{(Get-Variable "$($GnomeType)$($Set2)PhoneticUniques").Value -contains $_}
                     
+        }
+
+        foreach($Sound in $CommonSounds){
+    
+            $Wordbank1 = ''
+            $Wordbank1 = (Get-Variable "$($GnomeType)$($Set1)Objects").Value | ?{($_.IPA -like "$($Sound)*") -or ($_.IPA -like "$('ˈ')$($Sound)*")}
+
+            $Wordbank2 = ''
+            $Wordbank2 = (Get-Variable "$($GnomeType)$($Set2)Objects").Value | ?{($_.IPA -like "$($Sound)*") -or ($_.IPA -like "$('ˈ')$($Sound)*")}
+
+            foreach($Word in $Wordbank1){
+        
+                if($Wordbank2.Word -contains $Word.Word){
+            
+                    $KillRoll = ''
+                    $KillRoll = Get-Random -Minimum 1 -Maximum 3
+
+                    if($KillRoll -eq 1){$Wordbank1 = $Wordbank1 | ?{$_.Word -notlike "$($Word.Word)"}}
+                    if($KillRoll -eq 2){$Wordbank2 = $Wordbank2 | ?{$_.Word -notlike "$($Word.Word)"}}
+                
+                }
+
+            }
+
+        }
+
+        if(($Wordbank1.Count -gt 0) -and ($Wordbank2.Count -gt 0)){$Try = $false}
+
     }
 
-    #Remove duplicates from one array or the other... Then:
     $StartingSound = ''
     $StartingSound = $CommonSounds[(Get-Random -Minimum 0 -Maximum ($CommonSounds.Count))]
+    if($ReturnSet -eq $True){$CommonSounds}else{$StartingSound}
 
 }
 
@@ -3631,21 +3664,9 @@ function Get-GnomeSurname {
         if($Alliterative){
         
             if($Roll -eq 1){
-            
-                $CommonSounds = ''
-
-                if($RockAgentPhoneticUniques.Count -gt $RockAdjectivePhoneticUniques.Count){
-                
-                    $CommonSounds = $RockAdjectivePhoneticUniques | ?{$RockAgentPhoneticUniques -contains $_}
-                    
-                }else{
-                
-                    $CommonSounds = $RockAgentPhoneticUniques | ?{$RockAdjectivePhoneticUniques -contains $_}
-                    
-                }
 
                 $StartingSound = ''
-                $StartingSound = $CommonSounds[(Get-Random -Minimum 0 -Maximum ($CommonSounds.Count))]
+                $StartingSound = Get-Alliterative -GnomeType Rock -Set1 Agent -Set2 Adjective
 
                 $Options1 = ''
                 $Options1 = $RockAdjectiveObjects | ?{($_.IPA -like "$($StartingSound)*") -or($_.IPA -like "ˈ$($StartingSound)*")}
@@ -3662,32 +3683,9 @@ function Get-GnomeSurname {
             }
 
             if($Roll -eq 2){
-            
-                $TryAgain = $False
-
-                while($TryAgain -eq $False){
-
-                    $RockNounPhoneticUniques = $RockNounObjects.IPA | %{"$(if($_[0] -eq "ˈ"){$_[1]}else{$_[0]})"} | Sort-Object | Get-Unique
-                    $RockAgentPhoneticUniques = $RockAgentObjects.IPA | %{"$(if($_[0] -eq "ˈ"){$_[1]}else{$_[0]})"} | Sort-Object | Get-Unique
-
-                    $CommonSounds = ''
-
-                    if($RockNounPhoneticUniques.Count -gt $RockAgentPhoneticUniques.Count){
-                
-                        $CommonSounds = $RockAgentPhoneticUniques | ?{$RockNounPhoneticUniques -contains $_}
-                    
-                    }else{
-                
-                        $CommonSounds = $RockNounPhoneticUniques | ?{$RockAgentPhoneticUniques -contains $_}
-                    
-                    }
-
-                    if($CommonSounds){}
-
-                }
 
                 $StartingSound = ''
-                $StartingSound = $CommonSounds[(Get-Random -Minimum 0 -Maximum ($CommonSounds.Count))]
+                $StartingSound = Get-Alliterative -GnomeType Rock -Set1 Agent -Set2 Noun
 
                 $Options1 = ''
                 $Options1 = $RockNounObjects | ?{($_.IPA -like "$($StartingSound)*") -or($_.IPA -like "ˈ$($StartingSound)*")}
@@ -3705,20 +3703,8 @@ function Get-GnomeSurname {
 
             if($Roll -eq 3){
             
-                $CommonSounds = ''
-
-                if($RockNounPhoneticUniques.Count -gt $RockAdjectivePhoneticUniques.Count){
-                
-                    $CommonSounds = $RockAdjectivePhoneticUniques | ?{$RockNounPhoneticUniques -contains $_}
-                    
-                }else{
-                
-                    $CommonSounds = $RockNounPhoneticUniques | ?{$RockAdjectivePhoneticUniques -contains $_}
-                    
-                }
-
                 $StartingSound = ''
-                $StartingSound = $CommonSounds[(Get-Random -Minimum 0 -Maximum ($CommonSounds.Count))]
+                $StartingSound = Get-Alliterative -GnomeType Rock -Set1 Adjective -Set2 Noun
 
                 $Options1 = ''
                 $Options1 = $RockAdjectiveObjects | ?{($_.IPA -like "$($StartingSound)*") -or($_.IPA -like "ˈ$($StartingSound)*")}
@@ -3791,20 +3777,8 @@ function Get-GnomeSurname {
         
             if($Roll -eq 1){
             
-                $CommonSounds = ''
-
-                if($ForestAgentPhoneticUniques.Count -gt $ForestAdjectivePhoneticUniques.Count){
-                
-                    $CommonSounds = $ForestAdjectivePhoneticUniques | ?{$ForestAgentPhoneticUniques -contains $_}
-                    
-                }else{
-                
-                    $CommonSounds = $ForestAgentPhoneticUniques | ?{$ForestAdjectivePhoneticUniques -contains $_}
-                    
-                }
-
                 $StartingSound = ''
-                $StartingSound = $CommonSounds[(Get-Random -Minimum 0 -Maximum ($CommonSounds.Count))]
+                $StartingSound = Get-Alliterative -GnomeType Forest -Set1 Adjective -Set2 Agent
 
                 $Options1 = ''
                 $Options1 = $ForestAdjectiveObjects | ?{($_.IPA -like "$($StartingSound)*") -or($_.IPA -like "ˈ$($StartingSound)*")}
@@ -3822,20 +3796,8 @@ function Get-GnomeSurname {
 
             if($Roll -eq 2){
             
-                $CommonSounds = ''
-
-                if($ForestNounPhoneticUniques.Count -gt $ForestAgentPhoneticUniques.Count){
-                
-                    $CommonSounds = $ForestAgentPhoneticUniques | ?{$ForestNounPhoneticUniques -contains $_}
-                    
-                }else{
-                
-                    $CommonSounds = $ForestNounPhoneticUniques | ?{$ForestAgentPhoneticUniques -contains $_}
-                    
-                }
-
                 $StartingSound = ''
-                $StartingSound = $CommonSounds[(Get-Random -Minimum 0 -Maximum ($CommonSounds.Count))]
+                $StartingSound = Get-Alliterative -GnomeType Forest -Set1 Agent -Set2 Noun
 
                 $Options1 = ''
                 $Options1 = $ForestNounObjects | ?{($_.IPA -like "$($StartingSound)*") -or($_.IPA -like "ˈ$($StartingSound)*")}
@@ -3853,20 +3815,8 @@ function Get-GnomeSurname {
 
             if($Roll -eq 3){
             
-                $CommonSounds = ''
-
-                if($ForestNounPhoneticUniques.Count -gt $ForestAdjectivePhoneticUniques.Count){
-                
-                    $CommonSounds = $ForestAdjectivePhoneticUniques | ?{$ForestNounPhoneticUniques -contains $_}
-                    
-                }else{
-                
-                    $CommonSounds = $ForestNounPhoneticUniques | ?{$ForestAdjectivePhoneticUniques -contains $_}
-                    
-                }
-
                 $StartingSound = ''
-                $StartingSound = $CommonSounds[(Get-Random -Minimum 0 -Maximum ($CommonSounds.Count))]
+                $StartingSound = Get-Alliterative -GnomeType Forest -Set1 Adjective -Set2 Noun
 
                 $Options1 = ''
                 $Options1 = $ForestAdjectiveObjects | ?{($_.IPA -like "$($StartingSound)*") -or($_.IPA -like "ˈ$($StartingSound)*")}
